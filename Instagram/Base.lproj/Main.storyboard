@@ -88,6 +88,22 @@
             </objects>
             <point key="canvasLocation" x="1026" y="68"/>
         </scene>
+        <!--mypage-->
+        <scene sceneID="RYa-d2-PSQ">
+            <objects>
+                <viewController storyboardIdentifier="mypage" id="p9v-Xh-LYw" customClass="MypageViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Omb-ea-qBk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="I3x-Xu-8yr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="mypage" image="person.crop.circle" catalog="system" id="uCm-Ii-StF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z4H-df-FsM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1283" y="859"/>
+        </scene>
         <!--ホーム-->
         <scene sceneID="5UO-ar-81I">
             <objects>
@@ -95,14 +111,30 @@
                     <view key="view" contentMode="scaleToFill" id="t4O-RJ-hRt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="euQ-iN-ipd">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ieL-B7-fXZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="euQ-iN-ipd" firstAttribute="leading" secondItem="ieL-B7-fXZ" secondAttribute="leading" id="1Q6-Pg-fFf"/>
+                            <constraint firstItem="euQ-iN-ipd" firstAttribute="top" secondItem="ieL-B7-fXZ" secondAttribute="top" id="T2O-nE-M2e"/>
+                            <constraint firstItem="ieL-B7-fXZ" firstAttribute="bottom" secondItem="euQ-iN-ipd" secondAttribute="bottom" id="dAb-wb-bWk"/>
+                            <constraint firstItem="ieL-B7-fXZ" firstAttribute="trailing" secondItem="euQ-iN-ipd" secondAttribute="trailing" id="tft-c6-vv4"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="ホーム" image="home" id="tov-Xi-Pd3"/>
+                    <tabBarItem key="tabBarItem" title="ホーム" image="home" id="hFU-UF-ZUO"/>
+                    <navigationItem key="navigationItem" id="Drs-Wi-j82"/>
+                    <connections>
+                        <outlet property="tableView" destination="euQ-iN-ipd" id="Neq-5S-IHI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ASX-lg-x8L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1068" y="848"/>
+            <point key="canvasLocation" x="-494" y="848"/>
         </scene>
         <!--投稿-->
         <scene sceneID="RRx-ca-AC0">
@@ -161,7 +193,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WpS-7N-SdS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="35" y="848"/>
+            <point key="canvasLocation" x="487" y="848"/>
         </scene>
         <!--Post View Controller-->
         <scene sceneID="hFE-cq-tXX">
@@ -229,6 +261,72 @@
             </objects>
             <point key="canvasLocation" x="1925" y="68"/>
         </scene>
+        <!--Comment View Controller-->
+        <scene sceneID="1ad-ZK-wKg">
+            <objects>
+                <viewController storyboardIdentifier="comment" id="4BF-h2-Ibz" customClass="CommentViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0d0-ho-Lms">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4wn-ZU-PUD">
+                                <rect key="frame" x="25" y="204" width="364" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJp-CV-Oaa">
+                                <rect key="frame" x="25" y="258" width="364" height="40"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Comment" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="commentButton:" destination="4BF-h2-Ibz" eventType="touchUpInside" id="VI8-dK-iEt"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jmG-uf-1VQ">
+                                <rect key="frame" x="87" y="64" width="240" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="MKJ-WW-KJ2"/>
+                                    <constraint firstAttribute="width" constant="240" id="dbP-BZ-eYo"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TU8-tK-Pcd">
+                                <rect key="frame" x="25" y="318" width="364" height="40"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="キャンセル" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="cancelButton:" destination="4BF-h2-Ibz" eventType="touchUpInside" id="a2a-f7-LJx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zDr-j5-683"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4wn-ZU-PUD" firstAttribute="top" secondItem="jmG-uf-1VQ" secondAttribute="bottom" constant="20" id="4if-JY-wkx"/>
+                            <constraint firstItem="AJp-CV-Oaa" firstAttribute="top" secondItem="4wn-ZU-PUD" secondAttribute="bottom" constant="20" id="9N3-8u-RTs"/>
+                            <constraint firstItem="jmG-uf-1VQ" firstAttribute="top" secondItem="zDr-j5-683" secondAttribute="top" constant="20" id="HFh-Xw-SoK"/>
+                            <constraint firstItem="TU8-tK-Pcd" firstAttribute="leading" secondItem="zDr-j5-683" secondAttribute="leading" constant="25" id="Jf4-Wh-eMf"/>
+                            <constraint firstItem="jmG-uf-1VQ" firstAttribute="centerX" secondItem="0d0-ho-Lms" secondAttribute="centerX" id="QHs-Wh-0TV"/>
+                            <constraint firstItem="4wn-ZU-PUD" firstAttribute="centerX" secondItem="0d0-ho-Lms" secondAttribute="centerX" id="XFy-Ne-pag"/>
+                            <constraint firstItem="AJp-CV-Oaa" firstAttribute="centerX" secondItem="0d0-ho-Lms" secondAttribute="centerX" id="XVt-15-Dwb"/>
+                            <constraint firstItem="zDr-j5-683" firstAttribute="trailing" secondItem="jmG-uf-1VQ" secondAttribute="trailing" constant="87" id="cog-hl-X0G"/>
+                            <constraint firstItem="TU8-tK-Pcd" firstAttribute="top" secondItem="AJp-CV-Oaa" secondAttribute="bottom" constant="20" id="dw4-bN-vx7"/>
+                            <constraint firstItem="zDr-j5-683" firstAttribute="trailing" secondItem="TU8-tK-Pcd" secondAttribute="trailing" constant="25" id="ftG-z0-h1f"/>
+                            <constraint firstItem="zDr-j5-683" firstAttribute="trailing" secondItem="AJp-CV-Oaa" secondAttribute="trailing" constant="25" id="h0U-iP-fKx"/>
+                            <constraint firstItem="zDr-j5-683" firstAttribute="trailing" secondItem="4wn-ZU-PUD" secondAttribute="trailing" constant="25" id="iHV-L9-uh2"/>
+                            <constraint firstItem="4wn-ZU-PUD" firstAttribute="leading" secondItem="zDr-j5-683" secondAttribute="leading" constant="25" id="jlm-sL-wF9"/>
+                            <constraint firstItem="AJp-CV-Oaa" firstAttribute="leading" secondItem="zDr-j5-683" secondAttribute="leading" constant="25" id="sx1-CG-73j"/>
+                            <constraint firstItem="jmG-uf-1VQ" firstAttribute="leading" secondItem="zDr-j5-683" secondAttribute="leading" constant="87" id="xAp-KV-fvS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="commentTextField" destination="4wn-ZU-PUD" id="Ji9-RG-Rz3"/>
+                        <outlet property="imageView" destination="jmG-uf-1VQ" id="swP-1a-kir"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xkt-wP-ad6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3311.594202898551" y="-147.32142857142856"/>
+        </scene>
         <!--設定-->
         <scene sceneID="QAW-r5-IID">
             <objects>
@@ -286,7 +384,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A89-qL-9tK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1101" y="848"/>
+            <point key="canvasLocation" x="1486" y="848"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="2Lx-TS-8Ap">
@@ -299,9 +397,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="fRp-Bd-yrr" kind="relationship" relationship="viewControllers" id="Ipd-jo-uU2"/>
-                        <segue destination="jjp-cs-9NE" kind="relationship" relationship="viewControllers" id="UWD-Th-jO5"/>
-                        <segue destination="Xqj-7N-UCc" kind="relationship" relationship="viewControllers" id="auj-3f-y0g"/>
+                        <segue destination="fRp-Bd-yrr" kind="relationship" relationship="viewControllers" id="YvI-rA-1nu"/>
+                        <segue destination="jjp-cs-9NE" kind="relationship" relationship="viewControllers" id="U2C-nl-dyz"/>
+                        <segue destination="Xqj-7N-UCc" kind="relationship" relationship="viewControllers" id="vsi-1G-Vkz"/>
+                        <segue destination="p9v-Xh-LYw" kind="relationship" relationship="viewControllers" id="Vtv-lp-bWx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3pk-ja-Iex" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -313,6 +412,7 @@
         <image name="btn" width="300" height="40"/>
         <image name="camera" width="25" height="25"/>
         <image name="home" width="25" height="25"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
         <image name="setting" width="25" height="25"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -25,6 +25,10 @@ class PostViewController: UIViewController {
         imageView.image = image
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
     //投稿ボタンをタップしたときに呼ばれるメソッド
     @IBAction func handlePostButton(_ sender: Any) {
         //画像をJPEG形式に変換する
