@@ -88,21 +88,105 @@
             </objects>
             <point key="canvasLocation" x="1026" y="68"/>
         </scene>
-        <!--mypage-->
+        <!--Mypage View Controller-->
         <scene sceneID="RYa-d2-PSQ">
             <objects>
                 <viewController storyboardIdentifier="mypage" id="p9v-Xh-LYw" customClass="MypageViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Omb-ea-qBk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hcb-7O-Rfc">
+                                <rect key="frame" x="20" y="128" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="Aeb-gy-RSG"/>
+                                    <constraint firstAttribute="height" constant="90" id="DRB-8y-Wr7"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXc-IK-277">
+                                <rect key="frame" x="20" y="269" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dp4-6x-Gq8">
+                                <rect key="frame" x="20" y="233" width="194" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="I3x-Xu-8yr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SXc-IK-277" firstAttribute="top" secondItem="Dp4-6x-Gq8" secondAttribute="bottom" constant="15" id="F4x-mm-GNS"/>
+                            <constraint firstItem="Dp4-6x-Gq8" firstAttribute="top" secondItem="Hcb-7O-Rfc" secondAttribute="bottom" constant="15" id="K7m-Oj-icQ"/>
+                            <constraint firstItem="Dp4-6x-Gq8" firstAttribute="leading" secondItem="I3x-Xu-8yr" secondAttribute="leading" constant="20" id="V4y-TC-sab"/>
+                            <constraint firstItem="Hcb-7O-Rfc" firstAttribute="top" secondItem="I3x-Xu-8yr" secondAttribute="top" constant="40" id="a9p-xV-vTq"/>
+                            <constraint firstItem="SXc-IK-277" firstAttribute="leading" secondItem="I3x-Xu-8yr" secondAttribute="leading" constant="20" id="d0Y-K1-FZW"/>
+                            <constraint firstItem="Hcb-7O-Rfc" firstAttribute="leading" secondItem="I3x-Xu-8yr" secondAttribute="leading" constant="20" id="fZE-Oc-rBK"/>
+                            <constraint firstItem="I3x-Xu-8yr" firstAttribute="trailing" secondItem="SXc-IK-277" secondAttribute="trailing" constant="20" id="kOr-CX-z40"/>
+                            <constraint firstItem="I3x-Xu-8yr" firstAttribute="trailing" secondItem="Dp4-6x-Gq8" secondAttribute="trailing" constant="200" id="lUN-Bg-6Xh"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="mypage" image="person.crop.circle" catalog="system" id="uCm-Ii-StF"/>
+                    <navigationItem key="navigationItem" id="Kfl-uF-Rqg">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="setting" style="plain" id="L1q-Hx-Dhn">
+                            <connections>
+                                <action selector="optionButton:" destination="p9v-Xh-LYw" id="JWQ-cg-bYb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="accountImageView" destination="Hcb-7O-Rfc" id="S68-bK-ouL"/>
+                        <outlet property="introduceLabel" destination="SXc-IK-277" id="1KY-Xc-SBc"/>
+                        <outlet property="myNameLabel" destination="Dp4-6x-Gq8" id="KMy-sa-uFb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z4H-df-FsM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1283" y="859"/>
+            <point key="canvasLocation" x="-373.91304347826087" y="858.48214285714278"/>
+        </scene>
+        <!--Mypage Option View Controller-->
+        <scene sceneID="cjM-W5-a3I">
+            <objects>
+                <viewController storyboardIdentifier="mypageoption" id="Yhq-cE-xE3" customClass="MypageOptionViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0GO-9B-N6h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGx-An-9MK">
+                                <rect key="frame" x="57" y="94" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="mpy-l2-vY4"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="アイコン変更" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="imageChange:" destination="Yhq-cE-xE3" eventType="touchUpInside" id="IYk-jf-XAE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKI-1f-ckb">
+                                <rect key="frame" x="57" y="154" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="ESI-Al-UB6"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="自己紹介" backgroundImage="btn"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mbK-Gn-kDe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RKI-1f-ckb" firstAttribute="centerX" secondItem="0GO-9B-N6h" secondAttribute="centerX" id="0vj-P0-Rpz"/>
+                            <constraint firstItem="eGx-An-9MK" firstAttribute="centerX" secondItem="0GO-9B-N6h" secondAttribute="centerX" id="P66-bV-cSN"/>
+                            <constraint firstItem="eGx-An-9MK" firstAttribute="top" secondItem="mbK-Gn-kDe" secondAttribute="top" constant="50" id="SLK-Xe-vhS"/>
+                            <constraint firstItem="RKI-1f-ckb" firstAttribute="top" secondItem="eGx-An-9MK" secondAttribute="bottom" constant="20" id="Uu8-gh-0b7"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MFM-5u-kmv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-396" y="1632"/>
         </scene>
         <!--ホーム-->
         <scene sceneID="5UO-ar-81I">
@@ -134,7 +218,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ASX-lg-x8L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-494" y="848"/>
+            <point key="canvasLocation" x="415.94202898550731" y="847.76785714285711"/>
         </scene>
         <!--投稿-->
         <scene sceneID="RRx-ca-AC0">
@@ -193,7 +277,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WpS-7N-SdS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="487" y="848"/>
+            <point key="canvasLocation" x="1397.1014492753625" y="847.76785714285711"/>
         </scene>
         <!--Post View Controller-->
         <scene sceneID="hFE-cq-tXX">
@@ -384,7 +468,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A89-qL-9tK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1486" y="848"/>
+            <point key="canvasLocation" x="2395.6521739130435" y="847.76785714285711"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="2Lx-TS-8Ap">
@@ -400,12 +484,31 @@
                         <segue destination="fRp-Bd-yrr" kind="relationship" relationship="viewControllers" id="YvI-rA-1nu"/>
                         <segue destination="jjp-cs-9NE" kind="relationship" relationship="viewControllers" id="U2C-nl-dyz"/>
                         <segue destination="Xqj-7N-UCc" kind="relationship" relationship="viewControllers" id="vsi-1G-Vkz"/>
-                        <segue destination="p9v-Xh-LYw" kind="relationship" relationship="viewControllers" id="Vtv-lp-bWx"/>
+                        <segue destination="syq-4P-bGv" kind="relationship" relationship="viewControllers" id="Vtv-lp-bWx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3pk-ja-Iex" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="81.696428571428569"/>
+        </scene>
+        <!--mypage-->
+        <scene sceneID="dzH-B3-3sD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="syq-4P-bGv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="mypage" image="person.crop.circle" catalog="system" id="uCm-Ii-StF"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RPE-np-aih">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="p9v-Xh-LYw" kind="relationship" relationship="rootViewController" id="5c3-Cb-ejv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="azS-Go-Cs3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1284.0579710144928" y="858.48214285714278"/>
         </scene>
     </scenes>
     <resources>

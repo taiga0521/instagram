@@ -21,6 +21,7 @@
 		683DBEA0292E816000C836E3 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683DBE9F292E816000C836E3 /* TabBarViewController.swift */; };
 		683DBEA2292F1FAB00C836E3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 683DBEA1292F1FAB00C836E3 /* GoogleService-Info.plist */; };
 		6854FCC52933A15D00AF4B25 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6854FCC42933A15C00AF4B25 /* CommentViewController.swift */; };
+		6861AB7F293D181D00BC30CC /* MypageOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6861AB7E293D181D00BC30CC /* MypageOptionViewController.swift */; };
 		687FDD982930DA5A0018D67D /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687FDD972930DA5A0018D67D /* Const.swift */; };
 		687FDD9A2930EDBB0018D67D /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687FDD992930EDBB0018D67D /* PostData.swift */; };
 		688B657B293116E5008BE272 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688B6579293116E5008BE272 /* PostTableViewCell.swift */; };
@@ -46,6 +47,7 @@
 		683DBE9F292E816000C836E3 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		683DBEA1292F1FAB00C836E3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6854FCC42933A15C00AF4B25 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		6861AB7E293D181D00BC30CC /* MypageOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageOptionViewController.swift; sourceTree = "<group>"; };
 		687FDD972930DA5A0018D67D /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		687FDD992930EDBB0018D67D /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		688B6579293116E5008BE272 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
@@ -89,16 +91,17 @@
 			children = (
 				683DBE81292E750800C836E3 /* AppDelegate.swift */,
 				683DBE83292E750800C836E3 /* SceneDelegate.swift */,
+				6861AB7E293D181D00BC30CC /* MypageOptionViewController.swift */,
 				68EEE19F293CBEF000268D91 /* MypageViewController.swift */,
 				6854FCC42933A15C00AF4B25 /* CommentViewController.swift */,
 				688B6579293116E5008BE272 /* PostTableViewCell.swift */,
 				687FDD992930EDBB0018D67D /* PostData.swift */,
 				687FDD972930DA5A0018D67D /* Const.swift */,
 				683DBE9F292E816000C836E3 /* TabBarViewController.swift */,
-				683DBE9D292E75B700C836E3 /* SettingViewController.swift */,
 				683DBE9B292E75AA00C836E3 /* PostViewController.swift */,
-				683DBE99292E759E00C836E3 /* ImageSelectViewController.swift */,
+				683DBE9D292E75B700C836E3 /* SettingViewController.swift */,
 				683DBE97292E758C00C836E3 /* HomeViewController.swift */,
+				683DBE99292E759E00C836E3 /* ImageSelectViewController.swift */,
 				683DBE95292E757C00C836E3 /* LoginViewController.swift */,
 				683DBE87292E750800C836E3 /* Main.storyboard */,
 				683DBE8A292E750A00C836E3 /* Assets.xcassets */,
@@ -250,6 +253,7 @@
 				68EEE1A0293CBEF000268D91 /* MypageViewController.swift in Sources */,
 				683DBE98292E758C00C836E3 /* HomeViewController.swift in Sources */,
 				683DBE9C292E75AB00C836E3 /* PostViewController.swift in Sources */,
+				6861AB7F293D181D00BC30CC /* MypageOptionViewController.swift in Sources */,
 				683DBE9E292E75B700C836E3 /* SettingViewController.swift in Sources */,
 				687FDD9A2930EDBB0018D67D /* PostData.swift in Sources */,
 				683DBE96292E757C00C836E3 /* LoginViewController.swift in Sources */,

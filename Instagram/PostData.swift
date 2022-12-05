@@ -16,6 +16,7 @@ class PostData: NSObject {
     var likes: [String] = []
     var isLiked: Bool = false
     var comments: [String] = []
+    var introduces: String?
     
     init(document: QueryDocumentSnapshot) {
         self.id = document.documentID
